@@ -27,7 +27,7 @@ namespace Fiap.Exercicio.Final.Models
 
         public override void Retirar(decimal valor)
         {
-           if ((Tipo == TipoConta.Comum && valor > Saldo) || valor > Saldo + Limite)
+           if (valor > Saldo + Limite)
            {
                 throw new SaldoInsuficienteException("Saldo insuficiente");
            }
